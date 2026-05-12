@@ -8,7 +8,7 @@
 
 <!-- Intro & Typewriter -->
 <div align="center">
-  <h1>Hi, I'm Mahmudul Hossain Samir <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"></h1>
+  <h1>Hi, I'm Samir <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"></h1>
   <h3>Aspiring Software Engineer • Exploring WebDev & AI/ML</h3>
   <p>
     🚀 Building <b>Flux</b> – A Visual Data Pipeline Builder (FastAPI, Django, PostgreSQL)<br>
@@ -69,18 +69,6 @@
 
 > I'm actively contributing to the backend, focusing on FastAPI, Django, and PostgreSQL.
 
----
-
-## 📊 GitHub Stats & Trophies
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mhsamir25&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mhsamir25&layout=compact&langs_count=8&theme=radical" />
-  
-  <br><br>
-  
-  <img src="https://github-profile-trophy.vercel.app/?username=mhsamir25&theme=onedark&row=1&column=7&margin-w=15&margin-h=15" alt="trophies" />
-</div>
 
 ---
 
