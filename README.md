@@ -79,6 +79,8 @@
 <!-- STATS_START -->
 <div align="center">
 
+## 🏆 Problem Solving Stats  
+
 | Platform | Problems Solved |
 |:---:|:---:|
 | 🔴 Codeforces | **123** |
