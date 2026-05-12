@@ -1,0 +1,50 @@
+name: Update Problem Stats
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'    # runs every 2 hours
+  workflow_dispatch:         # lets you run it manually
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count problems and update README
+        run: |
+          # Clone your problem-solving repo
+          git clone https://github.com/mhsamir25/Problems-solved-by-me.git temp_repo
+
+          # Count files exactly matching your folder names
+          CODEFORCES=$(find temp_repo/rated_800 temp_repo/rated_900 temp_repo/rated_1000 temp_repo/rated_1100 temp_repo/rated_1200 temp_repo/rated_1300 temp_repo/rated_1500 temp_repo/rated_1900 -type f 2>/dev/null | wc -l)
+          ATCODER=$(find temp_repo/atcoder -type f 2>/dev/null | wc -l)
+          CSES=$(find temp_repo/cses -type f 2>/dev/null | wc -l)
+          LEETCODE=$(find temp_repo/leetcode -type f 2>/dev/null | wc -l)
+          RANDOM=$(find temp_repo/random -type f 2>/dev/null | wc -l)
+          TOTAL=$((CODEFORCES + ATCODER + CSES + LEETCODE + RANDOM))
+
+          # Build markdown table
+          TABLE="| Platform | Problems Solved |\n|----------|-----------------|\n"
+          TABLE+="| Codeforces | $CODEFORCES |\n"
+          TABLE+="| AtCoder | $ATCODER |\n"
+          TABLE+="| CSES | $CSES |\n"
+          TABLE+="| LeetCode | $LEETCODE |\n"
+          TABLE+="| Random | $RANDOM |\n"
+          TABLE+="| **Total** | **$TOTAL** |\n"
+
+          # Replace the marker section in README.md
+          sed -i "/<!-- STATS_START -->/,/<!-- STATS_END -->/{//!d}" README.md
+          sed -i "/<!-- STATS_START -->/a $TABLE" README.md
+
+          rm -rf temp_repo
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "📊 Auto-update problem solving stats"
+          git push
