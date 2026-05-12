@@ -13,30 +13,46 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Count problems and update README
+      - name: Generate fancy stats and update README
         run: |
-          # Clone your problem-solving repo
           git clone https://github.com/mhsamir25/Problems-solved-by-me.git temp_repo
 
-          # Count files in the exact folders (excluding "random" because it was noisy)
-          CODEFORCES=$(find temp_repo/rated_800 temp_repo/rated_900 temp_repo/rated_1000 temp_repo/rated_1100 temp_repo/rated_1200 temp_repo/rated_1300 temp_repo/rated_1500 temp_repo/rated_1900 -type f 2>/dev/null | wc -l)
+          # Auto-detect all rated_* folders for Codeforces
+          CODEFORCES=0
+          for dir in temp_repo/rated_*; do
+            if [ -d "$dir" ]; then
+              COUNT=$(find "$dir" -type f 2>/dev/null | wc -l)
+              CODEFORCES=$((CODEFORCES + COUNT))
+            fi
+          done
+
           ATCODER=$(find temp_repo/atcoder -type f 2>/dev/null | wc -l)
           CSES=$(find temp_repo/cses -type f 2>/dev/null | wc -l)
           LEETCODE=$(find temp_repo/leetcode -type f 2>/dev/null | wc -l)
-
           TOTAL=$((CODEFORCES + ATCODER + CSES + LEETCODE))
 
-          # Build markdown table
-          TABLE="| Platform | Problems Solved |\n|----------|-----------------|\n"
-          TABLE+="| Codeforces | $CODEFORCES |\n"
-          TABLE+="| AtCoder | $ATCODER |\n"
-          TABLE+="| CSES | $CSES |\n"
-          TABLE+="| LeetCode | $LEETCODE |\n"
-          TABLE+="| **Total** | **$TOTAL** |\n"
+          # ----- FANCY OUTPUT BLOCK -----
+          read -r -d '' STATS_BLOCK <<-EOF
+          <div align="center">
 
-          # Replace the marker section in README.md
+          ## 🏆 Problem Solving Stats  
+
+          | Platform | Problems Solved |
+          |:---:|:---:|
+          | 🔴 Codeforces | **$CODEFORCES** |
+          | 🔵 AtCoder | **$ATCODER** |
+          | 🟢 CSES | **$CSES** |
+          | 🟠 LeetCode | **$LEETCODE** |
+          | **🔥 Total** | **$TOTAL** |
+
+          <sub>📊 Auto‑updated every 2 hours</sub>
+
+          </div>
+          EOF
+
+          # Replace everything between the markers with the fancy block
           sed -i "/<!-- STATS_START -->/,/<!-- STATS_END -->/{//!d}" README.md
-          sed -i "/<!-- STATS_START -->/a $TABLE" README.md
+          sed -i "/<!-- STATS_START -->/r /dev/stdin" README.md <<< "$STATS_BLOCK"
 
           rm -rf temp_repo
 
@@ -45,5 +61,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --staged --quiet || git commit -m "📊 Auto-update problem solving stats"
+          git diff --staged --quiet || git commit -m "✨ Update fancy problem solving stats"
           git push
