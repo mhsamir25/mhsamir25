@@ -17,7 +17,7 @@ jobs:
         run: |
           git clone https://github.com/mhsamir25/Problems-solved-by-me.git temp_repo
 
-          # Count Codeforces problems (auto-discover rated_* folders)
+          # Auto-detect all rated_* folders for Codeforces
           CODEFORCES=0
           for dir in temp_repo/rated_*; do
             if [ -d "$dir" ]; then
@@ -31,26 +31,11 @@ jobs:
           LEETCODE=$(find temp_repo/leetcode -type f 2>/dev/null | wc -l)
           TOTAL=$((CODEFORCES + ATCODER + CSES + LEETCODE))
 
-          # Create a temporary file with the fancy stats block
-          cat > /tmp/stats.md <<-BLOCK
-          <div align="center">
+          # Write the fancy stats block to a temp file using printf (no heredoc)
+          printf '<div align="center">\n\n## 🏆 Problem Solving Stats  \n\n| Platform | Problems Solved |\n|:---:|:---:|\n| 🔴 Codeforces | **%d** |\n| 🔵 AtCoder | **%d** |\n| 🟢 CSES | **%d** |\n| 🟠 LeetCode | **%d** |\n| **🔥 Total** | **%d** |\n\n<sub>📊 Auto‑updated every 2 hours</sub>\n\n</div>\n' \
+          "$CODEFORCES" "$ATCODER" "$CSES" "$LEETCODE" "$TOTAL" > /tmp/stats.md
 
-          ## 🏆 Problem Solving Stats  
-
-          | Platform | Problems Solved |
-          |:---:|:---:|
-          | 🔴 Codeforces | **$CODEFORCES** |
-          | 🔵 AtCoder | **$ATCODER** |
-          | 🟢 CSES | **$CSES** |
-          | 🟠 LeetCode | **$LEETCODE** |
-          | **🔥 Total** | **$TOTAL** |
-
-          <sub>📊 Auto‑updated every 2 hours</sub>
-
-          </div>
-		BLOCK
-
-          # Insert the block between the markers
+          # Insert the block exactly between the markers
           sed -i "/<!-- STATS_START -->/,/<!-- STATS_END -->/{//!d}" README.md
           sed -i "/<!-- STATS_START -->/r /tmp/stats.md" README.md
 
