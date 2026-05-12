@@ -2,8 +2,8 @@ name: Update Problem Stats
 
 on:
   schedule:
-    - cron: '0 */2 * * *'    # runs every 2 hours
-  workflow_dispatch:         # lets you run it manually
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
 
 jobs:
   update-stats:
@@ -18,13 +18,13 @@ jobs:
           # Clone your problem-solving repo
           git clone https://github.com/mhsamir25/Problems-solved-by-me.git temp_repo
 
-          # Count files exactly matching your folder names
+          # Count files in the exact folders (excluding "random" because it was noisy)
           CODEFORCES=$(find temp_repo/rated_800 temp_repo/rated_900 temp_repo/rated_1000 temp_repo/rated_1100 temp_repo/rated_1200 temp_repo/rated_1300 temp_repo/rated_1500 temp_repo/rated_1900 -type f 2>/dev/null | wc -l)
           ATCODER=$(find temp_repo/atcoder -type f 2>/dev/null | wc -l)
           CSES=$(find temp_repo/cses -type f 2>/dev/null | wc -l)
           LEETCODE=$(find temp_repo/leetcode -type f 2>/dev/null | wc -l)
-          RANDOM=$(find temp_repo/random -type f 2>/dev/null | wc -l)
-          TOTAL=$((CODEFORCES + ATCODER + CSES + LEETCODE + RANDOM))
+
+          TOTAL=$((CODEFORCES + ATCODER + CSES + LEETCODE))
 
           # Build markdown table
           TABLE="| Platform | Problems Solved |\n|----------|-----------------|\n"
@@ -32,7 +32,6 @@ jobs:
           TABLE+="| AtCoder | $ATCODER |\n"
           TABLE+="| CSES | $CSES |\n"
           TABLE+="| LeetCode | $LEETCODE |\n"
-          TABLE+="| Random | $RANDOM |\n"
           TABLE+="| **Total** | **$TOTAL** |\n"
 
           # Replace the marker section in README.md
