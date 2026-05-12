@@ -17,7 +17,7 @@ jobs:
         run: |
           git clone https://github.com/mhsamir25/Problems-solved-by-me.git temp_repo
 
-          # Auto-detect all rated_* folders for Codeforces
+          # Count Codeforces problems (auto-discover rated_* folders)
           CODEFORCES=0
           for dir in temp_repo/rated_*; do
             if [ -d "$dir" ]; then
@@ -31,8 +31,8 @@ jobs:
           LEETCODE=$(find temp_repo/leetcode -type f 2>/dev/null | wc -l)
           TOTAL=$((CODEFORCES + ATCODER + CSES + LEETCODE))
 
-          # ----- FANCY OUTPUT BLOCK -----
-          read -r -d '' STATS_BLOCK <<-EOF
+          # Create a temporary file with the fancy stats block
+          cat > /tmp/stats.md <<-BLOCK
           <div align="center">
 
           ## 🏆 Problem Solving Stats  
@@ -48,13 +48,13 @@ jobs:
           <sub>📊 Auto‑updated every 2 hours</sub>
 
           </div>
-          EOF
+		BLOCK
 
-          # Replace everything between the markers with the fancy block
+          # Insert the block between the markers
           sed -i "/<!-- STATS_START -->/,/<!-- STATS_END -->/{//!d}" README.md
-          sed -i "/<!-- STATS_START -->/r /dev/stdin" README.md <<< "$STATS_BLOCK"
+          sed -i "/<!-- STATS_START -->/r /tmp/stats.md" README.md
 
-          rm -rf temp_repo
+          rm -rf temp_repo /tmp/stats.md
 
       - name: Commit and push
         run: |
