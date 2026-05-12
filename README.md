@@ -1,30 +1,109 @@
-# Hi 👋, I'm Mahmudul Hossain Samir
+<!-- Header Banner -->
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://via.placeholder.com/800x200/0d1117/ffffff?text=Mahmudul+Hossain+Samir">
+    <img src="https://via.placeholder.com/800x200/ffffff/000000?text=Mahmudul+Hossain+Samir" alt="Mahmudul Hossain Samir" width="100%">
+  </picture>
+</div>
 
-### Aspiring Software Engineer, Exploring WebDev and AI/ML
+<!-- Intro & Typewriter -->
+<div align="center">
+  <h1>Hi, I'm Mahmudul Hossain Samir <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"></h1>
+  <h3>Aspiring Software Engineer • Exploring WebDev & AI/ML</h3>
+  <p>
+    🚀 Building <b>Flux</b> – A Visual Data Pipeline Builder (FastAPI, Django, PostgreSQL)<br>
+    🧠 Currently mastering FastAPI, Django, Python<br>
+    🌍 Open to collaborate on open‑source projects
+  </p>
+</div>
 
-- 🔭 I'm currently working on **Flux-A Visual Data Pipeline Builder|Working on its backend, focusing on FastAPI, Django and PostgreSQL**
-
-- 🌱 I'm currently learning **FastAPI, Django, Python**
-
-- 👯 I'm looking to collaborate on **Open source projects**
-
-- 📫 How to reach me **mahmudul1@iut-dhaka.edu**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://github.com/mhsamir25" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="mhsamir25" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/mhsamir25" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mhsamir25" height="30" width="40" /></a>
-<a href="https://fb.com/mhsamir25" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="mhsamir25" height="30" width="40" /></a>
-<a href="https://instagram.com/samir_someone_unique" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="samir_someone_unique" height="30" width="40" /></a>
+<!-- Social Icons -->
+<h3 align="center">Connect with me:</h3>
+<p align="center">
+  <a href="https://github.com/mhsamir25" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="mhsamir25" height="30" width="40" /></a>
+  <a href="https://linkedin.com/in/mhsamir25" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mhsamir25" height="30" width="40" /></a>
+  <a href="https://fb.com/mhsamir25" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="mhsamir25" height="30" width="40" /></a>
+  <a href="https://instagram.com/samir_someone_unique" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="samir_someone_unique" height="30" width="40" /></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.mozilla.org/en-US/docs/Web/c" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=c" alt="c" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/cplusplus" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=cpp" alt="cplusplus" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/django" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=django" alt="django" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/fastapi" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=fastapi" alt="fastapi" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/git" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=git" alt="git" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/java" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=java" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/linux" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=linux" alt="linux" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/mongodb" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=mongodb" alt="mongodb" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/postgresql" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=postgres" alt="postgresql" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/python" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=py" alt="python" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/spring" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=spring" alt="spring" width="40" height="40"/> </a></p>
+<!-- Visitor & Followers Badges -->
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=mhsamir25&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
+  <a href="https://github.com/mhsamir25?tab=followers"><img src="https://img.shields.io/github/followers/mhsamir25?label=Followers&style=social" alt="GitHub followers"></a>
+</div>
+
+---
+
+## 🛠️ Languages & Tools
+
+### Languages
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+</p>
+
+### Web & Backend
+<p>
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
+</p>
+
+### Tools & OS
+<p>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+</p>
+
+---
+
+## 📌 Featured Project
+
+| Project | Description | Tech Stack |
+|:----|:----|:----|
+| [**Flux**](https://github.com/mhsamir25/flux) | Visual Data Pipeline Builder (backend) | FastAPI · Django · PostgreSQL |
+
+> I'm actively contributing to the backend, focusing on FastAPI, Django, and PostgreSQL.
+
+---
+
+## 📊 GitHub Stats & Trophies
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mhsamir25&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mhsamir25&layout=compact&langs_count=8&theme=radical" />
+  
+  <br><br>
+  
+  <img src="https://github-profile-trophy.vercel.app/?username=mhsamir25&theme=onedark&row=1&column=7&margin-w=15&margin-h=15" alt="trophies" />
+</div>
+
+---
+
+## 🐍 Contribution Snake
+
+<!-- Replace the placeholder with your generated snake.svg after setting up the snk action -->
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mhsamir25/mhsamir25/output/snake-dark.svg">
+    <img src="https://raw.githubusercontent.com/mhsamir25/mhsamir25/output/snake.svg" alt="Snake animation">
+  </picture>
+</div>
+
+<!-- To enable this snake, add the following workflow to your repo:
+     https://github.com/Platane/snk
+-->
+
+---
+
+## 🏆 Problem Solving Stats
 
 <!-- STATS_START -->
 <div align="center">
-
-## 🏆 Problem Solving Stats  
 
 | Platform | Problems Solved |
 |:---:|:---:|
