@@ -2,8 +2,6 @@
 
 ### Aspiring Software Engineer, Exploring WebDev and AI/ML
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=mhsamir25&label=Profile views&color=0e75b6&style=flat" alt="mhsamir25" /> </p>
-
 - 🔭 I'm currently working on **Flux-A Visual Data Pipeline Builder|Working on its backend, focusing on FastAPI and PostgreSQL**
 
 - 🌱 I'm currently learning **FastAPI, Django, Python**
