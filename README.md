@@ -2,7 +2,7 @@
 
 ### Aspiring Software Engineer, Exploring WebDev and AI/ML
 
-- 🔭 I'm currently working on **Flux-A Visual Data Pipeline Builder|Working on its backend, focusing on FastAPI and PostgreSQL**
+- 🔭 I'm currently working on **Flux-A Visual Data Pipeline Builder|Working on its backend, focusing on FastAPI, Django and PostgreSQL**
 
 - 🌱 I'm currently learning **FastAPI, Django, Python**
 
