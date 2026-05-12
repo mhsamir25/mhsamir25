@@ -1,8 +1,8 @@
 <!-- Header Banner -->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://via.placeholder.com/800x200/0d1117/ffffff?text=Mahmudul+Hossain+Samir">
-    <img src="https://via.placeholder.com/800x200/ffffff/000000?text=Mahmudul+Hossain+Samir" alt="Mahmudul Hossain Samir" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://placehold.co/800x200/0d1117/ffffff?text=Mahmudul+Hossain+Samir&font=raleway">
+    <img src="https://placehold.co/800x200/ffffff/000000?text=Mahmudul+Hossain+Samir&font=raleway" alt="Mahmudul Hossain Samir" width="100%">
   </picture>
 </div>
 
@@ -44,7 +44,7 @@
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
 </p>
 
-### Web & Backend
+### Web, Backend & Database
 <p>
   <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
@@ -84,19 +84,13 @@
 
 ---
 
-## 🐍 Contribution Snake
 
-<!-- Replace the placeholder with your generated snake.svg after setting up the snk action -->
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mhsamir25/mhsamir25/output/snake-dark.svg">
     <img src="https://raw.githubusercontent.com/mhsamir25/mhsamir25/output/snake.svg" alt="Snake animation">
   </picture>
 </div>
-
-<!-- To enable this snake, add the following workflow to your repo:
-     https://github.com/Platane/snk
--->
 
 ---
 
