@@ -28,7 +28,6 @@
 | AtCoder | 3 |
 | CSES | 4 |
 | LeetCode | 9 |
-| Random | 21582 |
-| **Total** | **985** |
+| **Total** | **139** |
 
 <!-- STATS_END -->
