@@ -1,11 +1,3 @@
-<!-- Header Banner -->
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://placehold.co/800x200/0d1117/ffffff?text=Mahmudul+Hossain+Samir&font=raleway">
-    <img src="https://placehold.co/800x200/ffffff/000000?text=Mahmudul+Hossain+Samir&font=raleway" alt="Mahmudul Hossain Samir" width="100%">
-  </picture>
-</div>
-
 <!-- Intro & Typewriter -->
 <div align="center">
   <h1>Hi, I'm Samir <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"></h1>
