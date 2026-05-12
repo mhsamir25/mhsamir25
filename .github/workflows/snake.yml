@@ -2,8 +2,14 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"       # daily at midnight UTC
-  workflow_dispatch:           # manual trigger
+    - cron: "0 0 * * *"        # daily at midnight UTC
+  workflow_dispatch:            # manual trigger
+
+permissions:
+  contents: write               # necessary to push to the repo
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # silences Node 20 deprecation warning
 
 jobs:
   generate:
@@ -12,9 +18,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0       # fetch all history for the push to work
+          fetch-depth: 0        # get full history (optional but harmless)
 
-      - name: Generate snake.svg
+      - name: Generate snake SVGs
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -22,10 +28,24 @@ jobs:
             dist/snake.svg?color_snake=#8A2BE2&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
             dist/snake-dark.svg?palette=github-dark&color_snake=#8A2BE2
 
-      - name: Push snake SVGs to output branch
-        uses: peaceiris/actions-gh-pages@v3.9.3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: output
-          publish_dir: ./dist
-          force_orphan: true   # single commit, no history issues
+      - name: Push to output branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Clone the repo into a temporary directory (to create output branch from scratch)
+          mkdir -p /tmp/output-branch
+          cd /tmp/output-branch
+          git init
+          git checkout --orphan output
+
+          # Copy the generated SVGs into the root of the output branch
+          cp $GITHUB_WORKSPACE/dist/snake.svg .
+          cp $GITHUB_WORKSPACE/dist/snake-dark.svg .
+
+          git add .
+          git commit -m "Update snake animation [skip ci]"
+
+          # Push using the token (force to overwrite the branch)
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push --force origin output
