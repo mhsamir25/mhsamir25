@@ -83,11 +83,11 @@
 
 | Platform | Problems Solved |
 |:---:|:---:|
-| 🔴 Codeforces | **124** |
+| 🔴 Codeforces | **125** |
 | 🔵 AtCoder | **3** |
 | 🟢 CSES | **4** |
 | 🟠 LeetCode | **9** |
-| **🔥 Total** | **140** |
+| **🔥 Total** | **141** |
 
 <sub>📊 Auto‑updated every 2 hours</sub>
 
