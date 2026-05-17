@@ -85,9 +85,9 @@
 |:---:|:---:|
 | 🔴 Codeforces | **125** |
 | 🔵 AtCoder | **3** |
-| 🟢 CSES | **4** |
+| 🟢 CSES | **6** |
 | 🟠 LeetCode | **9** |
-| **🔥 Total** | **141** |
+| **🔥 Total** | **143** |
 
 <sub>📊 Auto‑updated every 2 hours</sub>
 
